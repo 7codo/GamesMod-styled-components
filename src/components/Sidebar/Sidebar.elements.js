@@ -9,7 +9,21 @@ import { ResPadding } from "../../theme/GlobalStyles";
 
 export const LeftSidebar = styled.div`
   background-color: ${({ theme }) => theme.mainBg};
-  border-right: 1px solid ${({ theme }) => theme.mainTextkColor};
+  /* border-right: 1px solid ${({ theme }) => theme.mainTextkColor}; */
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    height: 95%;
+    width: 1px;
+    background: #ffffff30;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   position: fixed;
   left: 0;
   top: 0;

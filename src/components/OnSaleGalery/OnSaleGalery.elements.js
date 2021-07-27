@@ -30,9 +30,11 @@ export const RightNavIcon = styled(BiRightArrowCircle)`
 `;
 export const GamesItemsContainer = styled.div`
   display: flex;
+  overflow-x: auto;
+  
 `;
 export const GameItem = styled.div`
-  margin: 0 0.5em;
+  margin: 0.5em;
 `;
 export const Cover = styled.img`
   width: 204px;

@@ -60,6 +60,61 @@ const OnSaleGalery = () => {
                 <NewPrice>$8.67</NewPrice>
               </PriceContainer>
             </GameItem>
+            <GameItem>
+              <Cover src={ticktock} />
+              <Title>Ipsum adipisicing</Title>
+              <Kind>Action Games</Kind>
+
+              <PriceContainer>
+                <DiscountBy>-80%</DiscountBy>
+                <OldPrice>$50</OldPrice>
+                <NewPrice>$8.67</NewPrice>
+              </PriceContainer>
+            </GameItem>
+            <GameItem>
+              <Cover src={ticktock} />
+              <Title>Ipsum adipisicing</Title>
+              <Kind>Action Games</Kind>
+
+              <PriceContainer>
+                <DiscountBy>-80%</DiscountBy>
+                <OldPrice>$50</OldPrice>
+                <NewPrice>$8.67</NewPrice>
+              </PriceContainer>
+            </GameItem>
+            <GameItem>
+              <Cover src={ticktock} />
+              <Title>Ipsum adipisicing</Title>
+              <Kind>Action Games</Kind>
+
+              <PriceContainer>
+                <DiscountBy>-80%</DiscountBy>
+                <OldPrice>$50</OldPrice>
+                <NewPrice>$8.67</NewPrice>
+              </PriceContainer>
+            </GameItem>
+            <GameItem>
+              <Cover src={ticktock} />
+              <Title>Ipsum adipisicing</Title>
+              <Kind>Action Games</Kind>
+
+              <PriceContainer>
+                <DiscountBy>-80%</DiscountBy>
+                <OldPrice>$50</OldPrice>
+                <NewPrice>$8.67</NewPrice>
+              </PriceContainer>
+            </GameItem>
+            <GameItem>
+              <Cover src={ticktock} />
+              <Title>Ipsum adipisicing</Title>
+              <Kind>Action Games</Kind>
+
+              <PriceContainer>
+                <DiscountBy>-80%</DiscountBy>
+                <OldPrice>$50</OldPrice>
+                <NewPrice>$8.67</NewPrice>
+              </PriceContainer>
+            </GameItem>
           </GamesItemsContainer>
         </OnSaleContainer>
       </OnSaleSection>

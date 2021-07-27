@@ -59,6 +59,10 @@ export const NavLink = styled(Link)`
   .active & {
     color: #fff;
   }
+  transition: color 0.15s ease-in-out;
+  &:hover {
+    color: #fff;
+  }
 `;
 export const InteractContainer = styled.div`
   display: flex;

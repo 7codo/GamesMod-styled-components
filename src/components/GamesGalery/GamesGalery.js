@@ -14,12 +14,16 @@ import {
   HeadingTitle,
   Subtitle,
   RightArrowIcon,
+  GameCover,
 } from "./GamesGalery.elements";
 
+import { GamesOnGalery } from "../../pages/HomePage/Data";
+
 import { Button } from "../../theme/GlobalStyles";
-import rocket from "../../images/games/rocket.svg";
 
 const GamesGalery = () => {
+  console.log("😍", GamesOnGalery);
+
   return (
     <GalerySection>
       <GaleryContainer>
@@ -38,6 +42,7 @@ const GamesGalery = () => {
                 </Button>
               </BottomContent>
             </ShowScreenContainer>
+            {/* <GameCover src={cover1} /> */}
           </BottomGradient>
         </ShowScreen>
         <NavigationTabs>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { BsArrowRightShort } from "react-icons/bs";
+import cover1 from "../../images/games/covers/cover1.jpg";
 
 export const GalerySection = styled.section``;
 export const GaleryContainer = styled.div`
@@ -12,16 +13,16 @@ export const GaleryContainer = styled.div`
 export const ShowScreen = styled.div`
   width: 75%;
   border-bottom-left-radius: 10px;
-
+  position: relative;
   border-top-left-radius: 10px;
-  height: 465px;
-  background: #fff;
-  background-image: url("./../../images/games-wallpaper.svg");
+  height: 530px;
+  background-image: url(${cover1});
   @media screen and (max-width: 710px) {
     border-radius: 10px;
     width: 100%;
   }
 `;
+
 export const BottomGradient = styled.div`
   height: 100%;
   border-bottom-left-radius: 10px;
@@ -30,7 +31,13 @@ export const BottomGradient = styled.div`
     border-bottom-right-radius: 10px;
   }
 `;
-
+export const GameCover = styled.img`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+`;
 export const ShowScreenContainer = styled.div`
   padding: 1.5em;
   display: flex;
@@ -70,15 +77,26 @@ export const NavigationTabs = styled.div`
 export const GameTab = styled.div`
   display: flex;
   align-items: center;
-
-  padding: 0.25em 0.65em;
+  cursor: pointer;
+  margin: 0.25em 0;
+  padding: 0.5em 0.65em;
   height: calc(100% / 6);
-  &:after {
+  position: relative;
+  transition: all 0.5s ease-out;
+  &:hover {
+    & > p {
+      padding-left: 1.5em;
+    }
+  }
+  &.active:after {
     content: "";
     display: block;
-    height: 1px;
-    width: 75;
-    background: #0061fd;
+    height: 0.25px;
+    width: 75%;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   @media screen and (max-width: 710px) {
     height: 100px;
@@ -88,12 +106,12 @@ export const GameTab = styled.div`
   }
 `;
 export const Thumbnail = styled.img`
-  /* width: 30%;
+  min-width: 30%;
   height: 100%;
-  background: #fff;
+  background: #fff; /*
   padding-right: 0.65em; */
 `;
-export const Title = styled.h4`
+export const Title = styled.p`
   color: #fff;
   padding-left: 1em;
 `;

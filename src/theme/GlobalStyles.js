@@ -13,6 +13,22 @@ export const GlobalStyle = createGlobalStyle`
             font-size: .9rem;
         }
     }
+
+    /**Scroll bar style */
+    ::-webkit-scrollbar {
+      width: 6.5px ;
+      height: 6.5px ;
+    }
+    ::-webkit-scrollbar-track{
+      background: ${({ theme }) => theme.secondaryBg};
+    }
+    ::-webkit-scrollbar-thumb{
+      background: ${({ theme }) => theme.mainTextkColor};
+      transition: border .5s ease-out;
+    }
+    ::-webkit-scrollbar-thumb:hover{
+      border: 1px solid ${({ theme }) => theme.mainBg};
+    }
 `;
 
 export const ResPadding = styled.div`
