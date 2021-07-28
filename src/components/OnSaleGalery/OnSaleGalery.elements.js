@@ -70,6 +70,7 @@ export const DiscountBy = styled.p`
 export const OldPrice = styled.p`
   text-decoration: line-through;
   color: ${({ theme }) => theme.mainTextkColor};
+  padding: 0 0.2em;
 `;
 export const NewPrice = styled.p`
   font-weight: 700;
