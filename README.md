@@ -5,5 +5,5 @@
 - React JS
 - Styled-Components
 
-- Live Site URL: [Show Preview](https://7codo.github.io/sunnyside-agency-landing-page/)
+#### Live Site URL: [Show Preview](https://priceless-bardeen-78de6a.netlify.app/)
 
