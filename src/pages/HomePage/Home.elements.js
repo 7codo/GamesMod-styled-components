@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const MainHomeContainer = styled.main`
   width: calc(100% - 315px);
-  height: 100%;
+  /* height: 100vh; */
   position: relative;
   left: 315px;
   top: 0;
