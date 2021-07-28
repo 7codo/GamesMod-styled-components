@@ -4,7 +4,7 @@ import { AiFillHome, AiFillFire, AiTwotoneSetting } from "react-icons/ai";
 import { HiLibrary } from "react-icons/hi";
 import { FaUserFriends, FaUserCircle } from "react-icons/fa";
 import { CgMediaLive } from "react-icons/cg";
-import { BiDownload } from "react-icons/bi";
+import { BiDownload, BiArrowFromRight } from "react-icons/bi";
 import { ResPadding } from "../../theme/GlobalStyles";
 
 export const LeftSidebar = styled.div`
@@ -75,7 +75,14 @@ export const SidebarMenu = styled.ul`
     }
   }
 `;
-export const MenuItem = styled.li``;
+export const MenuItem = styled.li`
+  &.closeMenuItem {
+    display: none;
+    @media screen and (max-width: 966px) {
+      display: block;
+    }
+  }
+`;
 export const MenuLink = styled(Link)`
   text-decoration: none;
   display: flex;
@@ -110,3 +117,4 @@ export const LiveIcon = styled(CgMediaLive)``;
 export const DownloadIcon = styled(BiDownload)``;
 export const SettingIcon = styled(AiTwotoneSetting)``;
 export const UserIcon = styled(FaUserCircle)``;
+export const CloseSideIcon = styled(BiArrowFromRight)``;

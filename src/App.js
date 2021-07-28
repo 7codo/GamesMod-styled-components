@@ -45,8 +45,12 @@ function App() {
             handHideSidebar={handHideSidebar}
             handleTheme={handleTheme}
             theme={theme}
+            hideSidebar={hideSidebar}
           />
-          <Sidebar hideSidebar={hideSidebar} />
+          <Sidebar
+            hideSidebar={hideSidebar}
+            handHideSidebar={handHideSidebar}
+          />
           <Switch>
             <Route path="/" exact component={Home} />
           </Switch>

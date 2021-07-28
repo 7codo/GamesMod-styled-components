@@ -5,11 +5,13 @@ export const dark = {
   mainBg: "#141414",
   mainTextkColor: "#95959b",
   secondaryBg: "#2F2F2F",
+  scrollbarTrack: "#95959b",
 };
 
 export const light = {
   //Colors
-  mainBg: "#D0D0D0",
-  mainTextkColor: "#3E3A3B",
-  secondaryBg: "#292929",
+  mainBg: "#95959b",
+  mainTextkColor: "#141414",
+  secondaryBg: "#141414",
+  scrollbarTrack: "#b0b0b5",
 };

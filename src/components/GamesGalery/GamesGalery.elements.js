@@ -16,7 +16,12 @@ export const ShowScreen = styled.div`
   position: relative;
   border-top-left-radius: 10px;
   height: 530px;
-  background-image: url(${cover1});
+  background-image: url(${({ cover }) => cover});
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 966px) {
+    height: 430px;
+  }
   @media screen and (max-width: 710px) {
     border-radius: 10px;
     width: 100%;
@@ -51,6 +56,9 @@ export const TopTitle = styled.h3``;
 
 export const BottomContent = styled.div`
   width: 60%;
+  @media screen and (max-width: 710px) {
+    width: 90%;
+  }
 `;
 export const HeadingTitle = styled.p``;
 export const Subtitle = styled.h2`
@@ -66,19 +74,22 @@ export const NavigationTabs = styled.div`
   flex-direction: column;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  height: 530px;
+  @media screen and (max-width: 966px) {
+    height: 430px;
+  }
   @media screen and (max-width: 710px) {
     border-radius: 10px;
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 10px;
   }
 `;
 export const GameTab = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
-  margin: 0.25em 0;
+
   padding: 0.5em 0.65em;
   height: calc(100% / 6);
   position: relative;
@@ -99,17 +110,16 @@ export const GameTab = styled.div`
     left: 0;
   }
   @media screen and (max-width: 710px) {
-    height: 100px;
-    flex-direction: column;
-    justify-content: center;
+    /* height: 100px; */
+    /* background: red; */
+    width: 50%;
     border-bottom: 1px solid ${({ theme }) => theme.mainTextkColor};
   }
 `;
 export const Thumbnail = styled.img`
-  min-width: 30%;
+  max-width: 30%;
   height: 100%;
-  background: #fff; /*
-  padding-right: 0.65em; */
+  background: #fff;
 `;
 export const Title = styled.p`
   color: #fff;

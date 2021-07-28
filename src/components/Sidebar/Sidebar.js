@@ -15,16 +15,24 @@ import {
   DownloadIcon,
   SettingIcon,
   UserIcon,
+  CloseSideIcon,
 } from "./Sidebar.elements";
 import logo from "../../images/logo.svg";
 
-const Sidebar = ({ hideSidebar }) => {
+const Sidebar = ({ hideSidebar, handHideSidebar }) => {
   return (
     <LeftSidebar className={`${hideSidebar ? "hide" : ""}`}>
       <SidebarContainr>
         <Logo src={logo} alt="logo"></Logo>
         <SideContentContainr>
           <SidebarMenu>
+            <MenuItem onClick={handHideSidebar} className="closeMenuItem">
+              <MenuLink to="#close-sidebar">
+                <CloseSideIcon />
+                Close Sidebar
+              </MenuLink>
+            </MenuItem>
+
             <MenuItem>
               <MenuLink to="/home">
                 <HomeIcon />

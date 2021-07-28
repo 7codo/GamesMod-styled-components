@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
       background: ${({ theme }) => theme.secondaryBg};
     }
     ::-webkit-scrollbar-thumb{
-      background: ${({ theme }) => theme.mainTextkColor};
+      background: ${({ theme }) => theme.scrollbarTrack};
       transition: border .5s ease-out;
     }
     ::-webkit-scrollbar-thumb:hover{

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   GalerySection,
   GaleryContainer,
@@ -16,60 +16,54 @@ import {
   RightArrowIcon,
   GameCover,
 } from "./GamesGalery.elements";
-
 import { GamesOnGalery } from "../../pages/HomePage/Data";
-
 import { Button } from "../../theme/GlobalStyles";
 
 const GamesGalery = () => {
-  console.log("😍", GamesOnGalery);
+  const [id, setId] = useState(1);
+  const selectGame = GamesOnGalery.filter(
+    (gameOnGalery) => gameOnGalery.id === id
+  );
+  console.log(selectGame);
 
   return (
     <GalerySection>
       <GaleryContainer>
-        <ShowScreen>
-          <BottomGradient>
-            <ShowScreenContainer>
-              <TopTitle>Fortnite</TopTitle>
-              <BottomContent>
-                <HeadingTitle>Update</HeadingTitle>
-                <Subtitle>
-                  The hunt is on in Fortnite Chapter 2 - Season 5: Zero Point.
-                </Subtitle>
-                <Button primary>
-                  Play for free
-                  <RightArrowIcon />
-                </Button>
-              </BottomContent>
-            </ShowScreenContainer>
-            {/* <GameCover src={cover1} /> */}
-          </BottomGradient>
-        </ShowScreen>
+        {selectGame.map((selGame) => {
+          const { title, heading, longTitle, coverimg } = selGame;
+          return (
+            <ShowScreen cover={coverimg}>
+              <BottomGradient>
+                <ShowScreenContainer>
+                  <TopTitle>{title}</TopTitle>
+                  <BottomContent>
+                    <HeadingTitle>{heading}</HeadingTitle>
+                    <Subtitle>{longTitle}</Subtitle>
+                    <Button primary>
+                      Play for free
+                      <RightArrowIcon />
+                    </Button>
+                  </BottomContent>
+                </ShowScreenContainer>
+                {/* <GameCover src={cover1} /> */}
+              </BottomGradient>
+            </ShowScreen>
+          );
+        })}
         <NavigationTabs>
-          <GameTab className="active">
-            <Thumbnail />
-            <Title>Eu enim ullamco</Title>
-          </GameTab>
-          <GameTab>
-            <Thumbnail />
-            <Title>Rocket League®</Title>
-          </GameTab>
-          <GameTab>
-            <Thumbnail />
-            <Title>Duis amet</Title>
-          </GameTab>
-          <GameTab>
-            <Thumbnail />
-            <Title>Minim pariatur</Title>
-          </GameTab>
-          <GameTab>
-            <Thumbnail />
-            <Title>Elit aliqua</Title>
-          </GameTab>
-          <GameTab>
-            <Thumbnail />
-            <Title>Sunt magna</Title>
-          </GameTab>
+          {GamesOnGalery.map((gameOnGalery) => {
+            const { id, title, thumbnail } = gameOnGalery;
+            return (
+              <GameTab
+                key={id}
+                onClick={() => setId(id)}
+                className={`${id === 1 ? "active" : ""}`}
+              >
+                <Thumbnail src={thumbnail} />
+                <Title>{title}</Title>
+              </GameTab>
+            );
+          })}
         </NavigationTabs>
       </GaleryContainer>
     </GalerySection>

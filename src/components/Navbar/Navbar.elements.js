@@ -24,7 +24,9 @@ export const Nav = styled.nav`
   @media screen and (max-width: 966px) {
     left: 0;
     width: 100%;
-  } /*
+  }
+
+  /*
   @media screen and (min-width: 966px) {
     width: calc(100% - 315px);
     left: 315px;
@@ -35,6 +37,9 @@ export const NavContainer = styled(ResPadding)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 423px) {
+    flex-wrap: wrap;
+  }
 `;
 export const NavMenu = styled.ul`
   display: flex;
@@ -67,6 +72,11 @@ export const NavLink = styled(Link)`
 export const InteractContainer = styled.div`
   display: flex;
   align-items: center;
+  @media screen and (max-width: 423px) {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 1em;
+  }
 `;
 export const BellIcon = styled(AiFillBell)`
   margin-right: 1.5em;

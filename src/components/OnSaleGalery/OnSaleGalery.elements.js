@@ -27,11 +27,14 @@ export const LeftNavIcon = styled(BiLeftArrowCircle)`
 `;
 export const RightNavIcon = styled(BiRightArrowCircle)`
   cursor: pointer;
+  &.disable {
+    color: ${({ theme }) => theme.mainTextkColor};
+  }
 `;
 export const GamesItemsContainer = styled.div`
   display: flex;
   overflow-x: auto;
-  
+  scroll-behavior: smooth;
 `;
 export const GameItem = styled.div`
   margin: 0.5em;

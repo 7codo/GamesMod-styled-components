@@ -18,14 +18,14 @@ import {
   MenuIcon,
   ToggleMenu,
   SearchKits,
-  SearchButton
+  SearchButton,
 } from "./Navbar.elements";
 
-const Navbar = ({ handleTheme, theme, handHideSidebar }) => {
-  const [closeMenu, setCloseMenu] = useState(false);
+const Navbar = ({ handleTheme, theme, handHideSidebar, hideSidebar }) => {
+  // const [closeMenu, setCloseMenu] = useState(false);
 
   const handleCloseMenu = () => {
-    setCloseMenu(!closeMenu);
+    // setCloseMenu(!closeMenu);
     handHideSidebar();
   };
   return (
@@ -56,16 +56,16 @@ const Navbar = ({ handleTheme, theme, handHideSidebar }) => {
             </ToggleThemeButton>
             <BellIcon></BellIcon>
             <SearchKits>
-            <SearchContainer>
-              <SearchBox name="search" placeholder="Search"></SearchBox>
-              <SearchIcon />
-            </SearchContainer>
-            {/* on click show popup search */}
-              <SearchButton /> 
+              <SearchContainer>
+                <SearchBox name="search" placeholder="Search"></SearchBox>
+                <SearchIcon />
+              </SearchContainer>
+              {/* on click show popup search */}
+              <SearchButton />
             </SearchKits>
             <ToggleMenu onClick={handleCloseMenu}>
-              <MenuIcon className={`${closeMenu ? "" : "enable"}`} />
-              <CloseIcon className={`${closeMenu ? "enable" : ""}`} />
+              <MenuIcon className={`${hideSidebar ? "" : "enable"}`} />
+              <CloseIcon className={`${hideSidebar ? "enable" : ""}`} />
             </ToggleMenu>
           </InteractContainer>
         </NavContainer>
