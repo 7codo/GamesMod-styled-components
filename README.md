@@ -1,6 +1,11 @@
 # GamesMod
 
-### Built with
+## Features 
+- Toggle between dark and light themes 
+- Navigate the games in the gallery
+- Have best user experience
+
+## Built with
 
 - React JS
 - Styled-Components
