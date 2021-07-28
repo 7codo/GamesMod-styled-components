@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import { BsArrowRightShort } from "react-icons/bs";
-import cover1 from "../../images/games/covers/cover1.jpg";
 
 export const GalerySection = styled.section``;
 export const GaleryContainer = styled.div`

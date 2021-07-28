@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { IconContext } from "react-icons/lib";
 import {
   Nav,
@@ -47,11 +47,11 @@ const Navbar = ({ handleTheme, theme, handHideSidebar, hideSidebar }) => {
             <ToggleThemeButton>
               <SunIcon
                 onClick={handleTheme}
-                className={`${theme === "dark" && "theme_active"}`}
+                className={`${theme === "light" && "theme_active"}`}
               />
               <NightIcon
                 onClick={handleTheme}
-                className={`${theme === "light" && "theme_active"}`}
+                className={`${theme === "dark" && "theme_active"}`}
               />
             </ToggleThemeButton>
             <BellIcon></BellIcon>

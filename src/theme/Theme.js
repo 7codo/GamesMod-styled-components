@@ -1,5 +1,3 @@
-const enableDarkTheme = true;
-
 export const dark = {
   //Colors
   mainBg: "#141414",

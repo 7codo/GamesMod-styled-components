@@ -14,7 +14,6 @@ import {
   HeadingTitle,
   Subtitle,
   RightArrowIcon,
-  GameCover,
 } from "./GamesGalery.elements";
 import { GamesOnGalery } from "../../pages/HomePage/Data";
 import { Button } from "../../theme/GlobalStyles";
@@ -24,15 +23,14 @@ const GamesGalery = () => {
   const selectGame = GamesOnGalery.filter(
     (gameOnGalery) => gameOnGalery.id === id
   );
-  console.log(selectGame);
 
   return (
     <GalerySection>
       <GaleryContainer>
         {selectGame.map((selGame) => {
-          const { title, heading, longTitle, coverimg } = selGame;
+          const { id, title, heading, longTitle, coverimg } = selGame;
           return (
-            <ShowScreen cover={coverimg}>
+            <ShowScreen key={id} cover={coverimg}>
               <BottomGradient>
                 <ShowScreenContainer>
                   <TopTitle>{title}</TopTitle>

@@ -70,7 +70,6 @@ const OnSaleGalery = () => {
 
   const onLeftScroll = () => {
     gamesConRef.current.scrollTo(gamesConRef.current.scrollLeft - 100, 0);
-    console.log("scrollLeft", gamesConRef.current.scrollLeft);
     if (gamesConRef.current.scrollLeft === 0) {
       setDisableLeft(true);
       setDisableRight(false);
@@ -116,7 +115,7 @@ const OnSaleGalery = () => {
               return (
                 <GameItem ref={gamesItemRef} key={id}>
                   <Cover src={coverImg} />
-                  <Title>{title}</Title>
+                  <Title to={`game?title=${title}`}>{title}</Title>
                   <Kind>{kind}</Kind>
 
                   <PriceContainer>
